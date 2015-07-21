@@ -32,6 +32,12 @@
 	left: 20px;
 	top: 25px;
 	font-size: 26px;
+}
+.nav-left-list {
+	position: absolute;
+	left: 20px;
+	top: 25px;
+	font-size: 26px;
 	color: #fff;
 }
 .nav-right {

@@ -1,0 +1,26 @@
+<html>
+<head>
+<style>.delete { display: none; }</style>
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript" src="touch.js"></script>
+</head>
+<body>
+<ul id="items">
+  <li>List item 1 <span class=delete>DELETE</span></li>
+  <li>List item 2 <span class=delete>DELETE</span></li>
+</ul>
+</body>
+<script type="text/javascript">// show delete buttons on swipe
+$('#items li').swipeLeft(function(){
+  $('.delete').hide()
+  $('.delete', this).show()
+})
+
+// delete row on tapping delete button
+$('.delete').tap(function(){
+  $(this).parent('li').remove()
+})
+</script>
+
+</script>
+</html>

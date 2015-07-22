@@ -4,82 +4,174 @@
     <meta charset="utf-8"/>
     <title>个人记账</title>
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript" src="touch.js"></script>
 <style type="text/css">
-.shouru{
-	background-color: #8FDCBB;
-}
-.fushi{
-	background-color: #F59D69;
-}
-.canying{
-	background-color: #FF8789;
-}
-.jujia{
-	background-color: #C6B29E;
-}
-.jiaotong{
-	background-color: #6EB3DB;
-}
-.yule{
-	background-color: #DC574F;
-}
-.qita{
-	background-color: #FEC23E;
-}
-.navlist ul li{
-	display: inline-block;
-	margin: 0 20px;
-	color: #CEEBD5;
-}
-.active{
-	color: #fff!important;
-}
+
 </style>
 </head>
 <body>
-	<span class="nav-left-list iconfont">&#xe626;</span>
-	<div class="nav navlist">
+	<div  class="nav navlist" style="position:fixed;top:0;">
+	<span class="nav-left-list iconfont" >&#xe626;</span>
+	<span class="nav-right-list iconfont" >&#xe62a;</span>
 	记账本
+	<ul style="display:none;"><li class="active">账目列表</li><li>账目统计</li><li>账目图表</li></ul>
 	</div>
-	<span class="nav-right-list iconfont">&#xe62a;</span>
-	<div class="nav navlist">
-	<ul><li class="active">账目列表</li><li>账目统计</li><li>账目图表</li></ul>
-	</div>
-	<div class="content">
-	<ul>
+	<div class="contentlist" style="margin-top: 100px;">
+
+	<ul id="chargelist">
 		<li>
-			<div class="charge"><span class="chargeimg iconfont shouru">&#xe622;</span><div>
-			<div class="chargename">收入</div>
-		</li>
-	</ul>
-	<ul>
-		<li>
-		<div class="charge"><span class="chargeimg iconfont fushi">&#xe604;</span><div>
-		<div class="chargename">服饰</div>
-		</li>
-		<li>
-		<div class="charge"><span class="chargeimg iconfont canying">&#xe602;</span><div>
-		<div class="chargename">餐饮</div>
-		</li>
-		<li>
-		<div class="charge"><span class="chargeimg iconfont jujia">&#xe608;</span><div>
-		<div class="chargename">居家</div>
+			<div id="nav" class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont shouru">&#xe622;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">收入</span>
+				</div>
+				<div class="row-4">
+				<span class="incomeprice iconfont">&#xe625;480.50</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
 		</li>
 		<li>
-		<div class="charge"><span class="chargeimg iconfont jiaotong">&#xe605;</span><div>
-		<div class="chargename">交通</div>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont fushi">&#xe604;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">服饰</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;480.50</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
 		</li>
-	</ul>
-	<ul>
 		<li>
-			<div class="charge"><span class="chargeimg iconfont yule">&#xe606;</span><div>
-			<div class="chargename">娱乐</div>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont canying">&#xe602;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">餐饮</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;1020.50</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
 		</li>
 		<li>
-			<div class="charge"><span class="chargeimg iconfont qita">&#xe621;</span><div>
-			<div class="chargename">其他</div>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont jujia">&#xe608;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">居家</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;220.00</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont jiaotong">&#xe605;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">交通</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;50.00</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont jiaotong">&#xe605;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">交通</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;50.00</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont jiaotong">&#xe605;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">交通</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;50.00</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="row">
+				<div class="row-3">
+				<span class="chargeimg iconfont jiaotong">&#xe605;</span>
+				</div>
+				<div class="row-3">
+				<span class="chargelistname">交通</span>
+				</div>
+				<div class="row-4">
+				<span class="spendprice iconfont">&#xe62f;50.00</span>
+				</div>
+				<div class="row-2">
+				<span class="chargelistdate">15/07/22</span>
+				<span class="delete">DELETE</span>
+				</div>
+			</div>
 		</li>
 	</ul>
 	</div>
 </body>
+<script type="text/javascript">
+// show delete buttons on swipe
+$('#chargelist li').swipeLeft(function(){
+  $('.delete').hide()
+  $('.chargelistdate', this).hide()
+  $('.delete', this).css('display', 'inline-block')
+})
+$('#chargelist li').tap(function(){
+  $('.delete',this).hide()
+})
+// delete row on tapping delete button
+$('.delete').tap(function(){
+  $(this).parents('li').remove()
+})
+</script>
 </html>

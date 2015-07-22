@@ -1,11 +1,11 @@
 *{margin:0; padding:0;color: #8A8A8A;}
 @font-face {
   font-family: 'iconfont';
-  src: url('http://at.alicdn.com/t/font_1437479203_586101.eot'); /* IE9*/
-  src: url('http://at.alicdn.com/t/font_1437479203_586101.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('http://at.alicdn.com/t/font_1437479203_586101.woff') format('woff'), /* chrome、firefox */
-  url('http://at.alicdn.com/t/font_1437479203_586101.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('http://at.alicdn.com/t/font_1437479203_586101.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('http://at.alicdn.com/t/font_1437543956_8020933.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1437543956_8020933?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1437543956_8020933.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1437543956_8020933.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1437543956_8020933.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -13,9 +13,11 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;}
+body{
+	min-width: 500px;
+}
 .nav {
 	width: 100%;
-	height: 80px;
 	line-height: 80px;
 	background-color: #F8F8F8;
 	text-align: center;
@@ -36,7 +38,6 @@
 .nav-left-list {
 	position: absolute;
 	left: 20px;
-	top: 25px;
 	font-size: 26px;
 	color: #fff;
 }
@@ -48,9 +49,9 @@
 .nav-right-list {
 	position: absolute;
 	right: 20px;
-	top: 15px;
 	font-size: 48px;
 	color: #fff;
+
 }
 .btn {
 	display: inline-block;
@@ -91,6 +92,16 @@
 	display: inline-block;
 	margin: 0 20px;
 }
+.contentlist ul{
+	list-style-type: none;
+}
+.contentlist ul li{
+	display: inline-block;
+	margin: 0 20px;
+	height: 80px;
+	display: block;
+	border-bottom: 1px #E2E2E2 dashed;
+}
 .chargeimg{
 	width: 60px;
 	height: 60px;
@@ -103,4 +114,113 @@
 .chargename{
 	text-align: center;
 	line-height: 20px;
+}
+.shouru{
+	background-color: #8FDCBB;
+}
+.fushi{
+	background-color: #F59D69;
+}
+.canying{
+	background-color: #FF8789;
+}
+.jujia{
+	background-color: #C6B29E;
+}
+.jiaotong{
+	background-color: #6EB3DB;
+}
+.yule{
+	background-color: #DC574F;
+}
+.qita{
+	background-color: #FEC23E;
+}
+.navlist ul {
+	border-top: 1px #fff solid;
+}
+.navlist ul li{
+	display: inline-block;
+	margin: 0 20px;
+	color: #CEEBD5;
+}
+.active{
+	color: #fff!important;
+}
+.chargeimg{
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	font-size: 40px;
+	margin-top: 10px;
+	text-align: center;
+	border-radius: 60px;
+	line-height: 60px;
+	display: inline-block;
+
+}
+.chargelistname{
+	display: inline-block;
+	text-align: center;
+	line-height: 70px;
+	font-size: 28px;
+	color: #626262;
+}
+.row{/*12等份*/
+	width: 100%;
+	display: block;
+}
+.row-1{
+	display: inline-block;
+	float: left;
+	width: 8.33%;
+	text-align: center;
+}
+.row-2{
+	display: inline-block;
+	float: left;
+	width: 16.66%;
+	text-align: center;
+}
+.row-3{
+	display: inline-block;
+	float: left;
+	width: 24.99%;
+}
+.row-4{
+	display: inline-block;
+	float: left;
+	width: 33.33%;
+}
+.spendprice{
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	line-height: 75px;
+	font-size: 28px;
+	color: #DB615D;
+}
+.incomeprice{
+	width: 100%;
+	display: inline-block;
+	text-align: left;
+	line-height: 75px;
+	font-size: 28px;
+	color: #7BD3AC;
+}
+.chargelistdate{
+	width: 100%;
+	display: inline-block;
+	text-align: right;
+	font-size: 15px;
+	color: #ACACAC;	
+	margin-top: 10px;
+}
+.delete{
+	line-height: 80px;
+	color: #FFF;
+	width: 100px;
+	height: 75px;
+	background-color:#DC4344; 
+	display: none;
 }

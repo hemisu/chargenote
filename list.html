@@ -168,6 +168,7 @@ $('#chargelist li').swipeLeft(function(){
 })
 $('#chargelist li').tap(function(){
   $('.delete',this).hide()
+  $('.chargelist', this).css('display', 'inline-block')
 })
 // delete row on tapping delete button
 $('.delete').tap(function(){
